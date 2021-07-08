@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 @Controller
@@ -41,6 +42,20 @@ public class HomeController {
 		
 		//setting the data
 		modelAndView.addObject("name", "Rakesh Kumar");
+		modelAndView.addObject("rollnumber",1234);
+		LocalDateTime now = LocalDateTime.now();
+		modelAndView.addObject("time", now);
+		
+		List<Integer>list = new ArrayList<Integer>();
+		list.add(1234);
+		list.add(2342);
+		list.add(9487);
+		list.add(5884);
+		list.add(2312);
+		list.add(1234567890);
+		
+		modelAndView.addObject("number", list);
+		
 		//setting the view name
 		modelAndView.setViewName("help");
 		
