@@ -69,6 +69,11 @@ public class ContactController {
 		
 		System.out.println(user);
 		
+		if(user.getName().isBlank()) {
+			return "redirect:/contact";
+		}
+		
+		
 		int createdUser = this.userService.createUser(user);
 		
 		// process the data like :- modify data, send to db, check data etc

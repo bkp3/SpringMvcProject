@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @Controller
-@RequestMapping("/first")
 public class HomeController {
 
 	@RequestMapping("/")
