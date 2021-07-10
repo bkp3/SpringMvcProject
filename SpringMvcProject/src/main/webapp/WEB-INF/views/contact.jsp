@@ -23,25 +23,25 @@
 	<div class="container mt-5">
 	<h3 class="text-center">Registration Form</h3>
 	
-		<form action="/processform" method="post"> 
+		<form action="processform" method="post"> 
 	
 			<div class="form-group">
 				<label for="userEmail">Email address</label> 
 				<input
 					type="email" class="form-control" id="userEmail"
-					aria-describedby="emailHelp" placeholder="Enter email">
+					aria-describedby="emailHelp" placeholder="Enter email" name="email">
 			</div>
 			<div class="form-group">
 				<label for="userName">User Name</label> 
 				<input
 					type="text" class="form-control" id="userName"
-					placeholder="Enter name">
+					placeholder="Enter name" name="name">
 			</div>
 			<div class="form-group">
 				<label for="password">Password</label> 
 				<input
 					type="password" class="form-control" id="password"
-					placeholder="Enter password">
+					placeholder="Enter password" name="password">
 			</div>
 			
 			<div class="container text-center">
