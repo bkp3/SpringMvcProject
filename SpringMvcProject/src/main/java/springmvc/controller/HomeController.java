@@ -3,12 +3,14 @@ package springmvc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.time.LocalDateTime;
 import java.util.*;
 
 @Controller
+@RequestMapping("/first")
 public class HomeController {
 
 	@RequestMapping("/")
@@ -34,7 +36,7 @@ public class HomeController {
 		return "about";
 	}
 
-	@RequestMapping("/help")
+	@RequestMapping(path="/help", method=RequestMethod.GET)
 	public ModelAndView help() {
 
 		// creating model and view object
