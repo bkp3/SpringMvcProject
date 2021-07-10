@@ -2,6 +2,7 @@ package springmvc.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,9 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import springmvc.model.User;
+import springmvc.service.UserService;
 
 @Controller
 public class ContactController {
+	
+	@Autowired
+	private UserService userService;
 	
 	@RequestMapping("/contact")
 	public String showForm() {
@@ -60,13 +65,15 @@ public class ContactController {
 	//new fashion less code
 	
 	@RequestMapping(path="/processform",method=RequestMethod.POST)
-	public String handleForm(@ModelAttribute User user) {
+	public String handleForm(@ModelAttribute User user, Model model) {
 		
 		System.out.println(user);
 		
+		int createdUser = this.userService.createUser(user);
 		
 		// process the data like :- modify data, send to db, check data etc
 		
+		model.addAttribute("msg", "user created successful with :- "+createdUser);
 		return "success";
 	}
 

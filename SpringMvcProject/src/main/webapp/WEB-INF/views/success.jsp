@@ -17,9 +17,7 @@
   <body>
     <h1>Hello, world!</h1>
 
-	<h1>email :- ${user.email }</h1>
-	<h1>name :- ${user.name }</h1>
-	<h1>password :- ${user.password }</h1>
+<h1>${msg }</h1>
 
 
 
