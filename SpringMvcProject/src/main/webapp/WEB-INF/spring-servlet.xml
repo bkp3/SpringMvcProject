@@ -18,8 +18,9 @@
 	<mvc:annotation-driven />
 
 	<tx:annotation-driven />
-	
-	<mvc:resources location="/WEB-INF/resource/" mapping="/resource/**"/>
+
+	<mvc:resources location="/WEB-INF/resource/"
+		mapping="/resource/**" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
@@ -72,6 +73,11 @@
 		name="transactionManager">
 		<property name="sessionFactory" ref="factory" />
 	</bean>
+
+
+	<!-- Multipart Resolver -->
+	<bean name="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
 
 
