@@ -18,8 +18,16 @@
     <h1>Hello, world!</h1>
 
 <h1>${student }</h1>
+<hr>
+<br><br>
+<h1>Student name :- ${student.name }</h1>
+<h1>Student ID :- ${student.id }</h1>
+<h1>Student DOB :- ${student.date }</h1>
+<h1>Student Course :- ${student.courses }</h1>
+<h1>Student Gender :- ${student.gender }</h1>
 
-
+<h1>Student Address street :- ${student.address.street}</h1>
+<h1>Student Address city :- ${student.address.city }</h1>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

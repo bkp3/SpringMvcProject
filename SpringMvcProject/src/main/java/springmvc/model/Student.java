@@ -12,12 +12,14 @@ public class Student {
 	private String gender;
 	private String type;
 
+	private Address address;
+
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(String name, Long id, Date date, List<String> courses, String gender, String type) {
+	public Student(String name, Long id, Date date, List<String> courses, String gender, String type, Address address) {
 		super();
 		this.name = name;
 		this.id = id;
@@ -25,6 +27,7 @@ public class Student {
 		this.courses = courses;
 		this.gender = gender;
 		this.type = type;
+		this.address = address;
 	}
 
 	public String getName() {
@@ -75,10 +78,18 @@ public class Student {
 		this.type = type;
 	}
 
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", id=" + id + ", date=" + date + ", courses=" + courses + ", gender=" + gender
-				+ ", type=" + type + "]";
+				+ ", type=" + type + ", address=" + address + "]";
 	}
 
 }
