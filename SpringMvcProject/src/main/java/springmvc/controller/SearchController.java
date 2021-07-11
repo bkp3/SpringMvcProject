@@ -37,9 +37,9 @@ public class SearchController {
 	
 	//Handling exception in mvc
 	
-	@ExceptionHandler({Exception.class})
-	public String exceptionHandlerNull() {
-		return "nullpage";
-	}
+	/*
+	 * @ExceptionHandler({Exception.class}) public String exceptionHandlerNull() {
+	 * return "nullpage"; }
+	 */
 
 }
